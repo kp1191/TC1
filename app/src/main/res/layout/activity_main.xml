@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/split"
+        android:layout_width="60dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginBottom="97dp"
+        android:text="Split"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/boutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/billamt" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:fontFamily="cursive"
+        android:text="Tip Calculator"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/billamt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="180dp"
+        android:text="Bill Amount : "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="%"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/cad4"
+        app:layout_constraintStart_toStartOf="@+id/cad4"
+        app:layout_constraintTop_toBottomOf="@+id/bamt" />
+
+    <TextView
+        android:id="@+id/tipoutput"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="87dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/soutput"
+        app:layout_constraintEnd_toStartOf="@+id/cad5"
+        app:layout_constraintStart_toEndOf="@+id/tip"
+        app:layout_constraintTop_toTopOf="@+id/boutput" />
+
+    <TextView
+        android:id="@+id/cad2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:text="CAD"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/boutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/boutput" />
+
+    <EditText
+        android:id="@+id/cnum"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginRight="117dp"
+        android:layout_marginBottom="96dp"
+        android:ems="10"
+        android:inputType="number"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tipoutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tc"
+        app:layout_constraintTop_toTopOf="@+id/tipper1" />
+
+    <EditText
+        android:id="@+id/tipper1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/split"
+        app:layout_constraintEnd_toEndOf="@+id/cnum"
+        app:layout_constraintStart_toEndOf="@+id/tipper"
+        app:layout_constraintTop_toTopOf="@+id/tipper" />
+
+    <TextView
+        android:id="@+id/tc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="Total Customers : "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/cnum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cnum" />
+
+    <TextView
+        android:id="@+id/cad4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:text="CAD"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/bamt"
+        app:layout_constraintTop_toTopOf="@+id/bamt" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:text="Tip Amount : "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tipoutput"
+        app:layout_constraintEnd_toStartOf="@+id/tipoutput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/bdisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="Bill Amount : "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/boutput"
+        app:layout_constraintEnd_toStartOf="@+id/boutput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/soutput"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/pp"
+        app:layout_constraintStart_toEndOf="@+id/samt"
+        app:layout_constraintTop_toTopOf="@+id/tamt" />
+
+    <TextView
+        android:id="@+id/toutput"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="44dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tipoutput"
+        app:layout_constraintEnd_toStartOf="@+id/cad"
+        app:layout_constraintStart_toEndOf="@+id/tax"
+        app:layout_constraintTop_toTopOf="@+id/boutput" />
+
+    <TextView
+        android:id="@+id/pp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:text="per person "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/soutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/soutput" />
+
+    <TextView
+        android:id="@+id/samt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="Split Amount : "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/soutput"
+        app:layout_constraintEnd_toStartOf="@+id/soutput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="Tip Percent : "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/billamt"
+        app:layout_constraintTop_toBottomOf="@+id/billamt" />
+
+    <TextView
+        android:id="@+id/boutput"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="129dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="128dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tmtopt"
+        app:layout_constraintEnd_toStartOf="@+id/cad2"
+        app:layout_constraintStart_toEndOf="@+id/bdisplay"
+        app:layout_constraintTop_toBottomOf="@+id/per" />
+
+    <TextView
+        android:id="@+id/tamt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:text="Total Amount : "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tmtopt"
+        app:layout_constraintEnd_toStartOf="@+id/tmtopt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="GST/HST (13%) : "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/toutput"
+        app:layout_constraintEnd_toStartOf="@+id/toutput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/cad3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="195dp"
+        android:text="CAD"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tmtopt" />
+
+    <EditText
+        android:id="@+id/bamt"
+        android:layout_width="137dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/tipper"
+        app:layout_constraintEnd_toEndOf="@+id/tipper1"
+        app:layout_constraintStart_toEndOf="@+id/tipper"
+        app:layout_constraintTop_toTopOf="@+id/billamt" />
+
+    <TextView
+        android:id="@+id/cad5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:text="CAD"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tipoutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tipoutput" />
+
+    <TextView
+        android:id="@+id/tmtopt"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cad3"
+        app:layout_constraintEnd_toStartOf="@+id/cad3"
+        app:layout_constraintStart_toEndOf="@+id/tamt" />
+
+    <TextView
+        android:id="@+id/cad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:text="CAD"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/toutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toutput" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="61dp"
+        android:backgroundTint="@color/black"
+        android:text="calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/soutput" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
